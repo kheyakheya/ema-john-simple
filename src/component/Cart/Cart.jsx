@@ -7,16 +7,16 @@ const Cart = ({cart}) => {
     let quantity=0;
     let totalShipping=0;
     for(const product of cart){
-        if(product.quantity==0){
-            product.quantity=1;``
-        }
+        // if(product.quantity==0){
+        //     product.quantity=1;
+        // }
         // product.quantity=product.quantity || 1;
         total= total + product.price * product.quantity;
         totalShipping= totalShipping + product.shipping;
         quantity= quantity + product.quantity;
        
     }
-    console.log("quanr", quantity)
+    
     const tax= total*7/100;
     const grandTotal=total + totalShipping + tax;
     return (
